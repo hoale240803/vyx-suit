@@ -1,33 +1,22 @@
 # E-Commerce Suit App Plan
 
-**Architecture:**
+## Project Stack
 
-* **Frontend:** Vercel (Next.js)
-* **Backend:** Render (Node.js + Express)
-* **Database:** MongoDB Atlas
+**Frontend:** React.js
 
-**🛠 Key Features:**
+**Backend:** Nest.js (Node.js + TypeScript)
 
-* **11-Step Suit Selection Process:** Multi-Step Form/Wizard
-* **Authentication:** NextAuth.js or JWT-based
-* **Product Catalog:** Users can browse and filter suits
-* **Cart & Checkout:** Stripe Integration for payments (optional)
-* **Order Management:** Users can track orders
-* **Admin Panel:** Admins can manage products and orders
-* **CI/CD:** Auto-deploy via GitHub to Vercel & Render
-* **Minimal Cost:** Use free tiers of Vercel, Render, and MongoDB
+**Database:** MongoDB (via Mongoose)
 
-**Project Structure:**
+**Authentication:** JWT or NextAuth
 
-Markdown
+**Deployment:**
 
-# E-Commerce Suit App Plan
+* Frontend: Vercel (Free)
+* Backend: Render (Free)
+* Database: MongoDB Atlas (Free)
 
-**Architecture:**
-
-* **Frontend:** Vercel (Next.js)
-* **Backend:** Render (Node.js + Express)
-* **Database:** MongoDB Atlas
+**CI/CD:** GitHub Actions
 
 **🛠 Key Features:**
 
@@ -43,22 +32,26 @@ Markdown
 **Project Structure:**
 
 ```
-
 ecommerce-suit-app/
-├── backend/                  # Node.js + Express backend
-│   ├── models/               # Mongoose models (User, Product, Order)
-│   ├── routes/               # Express routes
-│   ├── controllers/          # Business logic
-│   ├── config/               # MongoDB & API configs
-│   ├── server.js             # Express server entry point
-├── frontend/                 # Next.js frontend
-│   ├── components/           # Reusable UI components
-│   ├── pages/                # Next.js pages (Multi-Step Form, Checkout, etc.)
-│   ├── context/              # Context API for global state
-│   ├── styles/               # Tailwind CSS styles
-│   ├── utils/                # Helper functions
-├── .github/workflows/         # CI/CD setup for Vercel & Render
-├── .env                      # Environment variables
-├── package.json              # Dependencies & scripts
-├── README.md                 # Project documentation
+│── backend/                 # Nest.js Backend  
+│   ├── src/                 # Source code  
+│   │   ├── modules/         # Features (auth, products, orders)  
+│   │   ├── controllers/     # Route handlers  
+│   │   ├── services/        # Business logic  
+│   │   ├── models/          # Mongoose models  
+│   │   ├── middleware/      # Auth middleware  
+│   │   ├── main.ts          # Entry point  
+│   ├── test/                # Unit tests  
+│   ├── package.json         # Dependencies  
+│── frontend/                # React.js Frontend  
+│   ├── src/                 # Source code  
+│   │   ├── components/      # Reusable UI components  
+│   │   ├── pages/           # React Pages  
+│   │   ├── context/         # Global state (Context API / Redux)  
+│   │   ├── services/        # API calls  
+│   │   ├── App.js           # Main app component  
+│   ├── package.json         # Dependencies  
+│── .github/workflows/       # CI/CD GitHub Actions  
+│── README.md                # Documentation  
+│── .env                     # Environment variables  
 ```
